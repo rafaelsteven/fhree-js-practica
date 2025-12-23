@@ -26,7 +26,6 @@ function NubeEstilizada({ position }) {
 export default function Ventana({ noche, ...props }) {
   const nubesRef = useRef()
   const estrellaFugasRef = useRef()
-  noche = false
   useFrame((state, delta) => {
     const t = state.clock.elapsedTime
 

@@ -63,7 +63,7 @@ export default function Rubik(props) {
     <group {...props} onClick={(e) => (e.stopPropagation(), setArmado(!armado))}>
       {/* Base */}
       <mesh position={[0, -0.7, 0]}>
-        <cylinderGeometry args={[0.4, 0.45, 0.05, 32]} />
+        <cylinderGeometry args={[0.4, 0.45, 0.2, 32]} />
         <meshStandardMaterial color="#111" metalness={0.9} roughness={0.1} />
       </mesh>
 
