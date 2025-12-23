@@ -12,13 +12,14 @@ export default function Mesa(props) {
         radius={0.05}       // El "radio" del redondeo. ¡No lo pongas muy alto!
         smoothness={4}      // Cuántos segmentos tiene la curva (4-8 está bien)
         castShadow
+        receiveShadow
         position={[0, 1, 0]}
       >
-        <meshStandardMaterial  color="#ffd3af" />
+        <meshStandardMaterial  color="#ffd3af" roughness={0.7} />
       </RoundedBox>
 
       {/* PATAS (Usamos cilindros para que sean redondas de por sí) */}
-      <mesh position={[-1.5, 0.5, -0.8]} castShadow>
+      <mesh position={[-1.5, 0.5, -0.8]} castShadow >
         <cylinderGeometry args={[0.05, 0.05, 1, 16]} />
         <meshStandardMaterial color="#333" />
       </mesh>

@@ -2,9 +2,9 @@ import { useRef } from 'react'
 import { Canvas,useFrame } from '@react-three/fiber'
 import { OrbitControls, ContactShadows, Float } from '@react-three/drei'
 import { useState } from 'react'
-import Laptop from './three/components/Laptop'
-import Mesa from './three/components/Mesa'
-import Particulas from './three/components/Particulas'
+import Laptop from '../three/components/Laptop'
+import Mesa from '../three/components/Mesa'
+import Particulas from '../three/components/Particulas'
 import { Grid, Stats } from '@react-three/drei'
 
 

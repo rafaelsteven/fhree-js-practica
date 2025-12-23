@@ -8,6 +8,11 @@ import Cuarto from './three/components/Cuarto'
 import Ventana from './three/components/Ventana'
 import Monitor from './three/components/Monitor'
 import Mouse from './three/components/Mouse'
+import AdornoFlotante from './three/components/AdornoFlotante'
+import EstanLibros from './three/components/EstanLibros'
+import CuboRubik from './three/components/CuboRubik'
+import TazaCafe from './three/components/TazaCafe'
+  
 function RoomLight() {
   const [lightOn, setLightOn] = useState(true)
   
@@ -46,7 +51,13 @@ function App() {
           <RoomLight />
           {/* Luz suave que viene de todos lados (Relleno) */}
           <Environment preset="city" background blur={1} />
-
+          <directionalLight
+            castShadow
+            position={[5, 10, 5]}
+            intensity={1.5}
+            shadow-bias={-0.0001} // Este pequeño valor evita errores en superficies curvas
+            shadow-mapSize={[1024, 1024]}
+          />
           <OrbitControls 
             makeDefault
             // No dejamos que el usuario se aleje más allá de las paredes (ej. si el cuarto mide 10x10)
@@ -64,11 +75,15 @@ function App() {
           <Cuarto />
           <Ventana position={[0, 2.5, -4.9]} />
           <Mesa position={[0, 0, -3.5]} />
-          <Laptop position={[0, 1.1, -2.8]} scale={0.5}/>
+          <Laptop position={[0, 1.1, -3.2]} scale={0.5}/>
           <group>
-            <Monitor position={[-0.9, 1.1, -2.8]} encendido={true}/>
+            <Monitor position={[-0.9, 1.1, -3.2]} rotation={[0, Math.PI / 5, 0]} encendido={true}/>
           </group>
-          <Mouse position={[1, 1.1, -2.8]} />
+          <Mouse position={[1, 1.1, -3.2]} rotation={[0, Math.PI / 1, 0]}/>
+          <AdornoFlotante position={[1.3, 1.1, -3.9]} /> 
+          <EstanLibros  position={[-3.5, 2, -4.5]} pisos={2} />
+          <EstanLibros  position={[3.5, 2, -4.5]} pisos={2} adorno={<CuboRubik scale={0.4} />}/>
+          <TazaCafe position={[1.5, 1.1, -3]} scale={0.5}/>
         </Canvas>
       </KeyboardControls>
     </div>

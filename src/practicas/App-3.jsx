@@ -2,8 +2,8 @@ import { useRef } from 'react'
 import { Canvas,useFrame } from '@react-three/fiber'
 import { OrbitControls, ContactShadows, Float } from '@react-three/drei'
 import { useState } from 'react'
-import Laptop from './three/components/Laptop'
-import { Level } from './three/components/scene'
+import Laptop from '../three/components/Laptop'
+import { Level } from '../three/components/scene'
 
 function Box(props) {
   return (

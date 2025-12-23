@@ -7,7 +7,7 @@ export default function Mouse(props) {
   const [colorIndex, setColorIndex] = useState(0)
   
   // Lista de colores para el LED
-  const colores = ['#00ff00', '#ff00ff', '#00ffff', '#ffcc00', '#ff0000']
+  const colores = ['#00ff00', '#1900ff', '#00ffff', '#ffcc00', '#ff0000']
 
   useFrame((state) => {
     // Cambiar color cada 2 segundos basado en el tiempo transcurrido
@@ -31,9 +31,9 @@ export default function Mouse(props) {
       </mesh>
 
       {/* LÍNEA LED (Ajustada sobre la superficie) */}
-      <mesh position={[0, 0.1, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <mesh position={[0, 0.06, -0.05]} rotation={[-Math.PI / 2, 0, 0]}>
         {/* Un anillo muy delgado que abraza el lomo del mouse */}
-        <torusGeometry args={[0.08, 0.005, 16, 100, Math.PI]} />
+        <torusGeometry args={[0.09, 0.005, 16, 100, Math.PI]} />
         <meshStandardMaterial 
           ref={ledRef}
           color={colores[colorIndex]} 
@@ -53,6 +53,10 @@ export default function Mouse(props) {
       <mesh position={[0, 0.11, 0.06]} rotation={[Math.PI / 2, 0, 0]}>
         <cylinderGeometry args={[0.02, 0.02, 0.02, 16]} />
         <meshStandardMaterial color="#333" />
+      </mesh>
+      <mesh>
+        <boxGeometry args={[0.5, 0.02, 0.5]} position={[0, 0, 0.1]} />
+        <meshStandardMaterial color="#424242" />
       </mesh>
     </group>
   )

@@ -50,7 +50,6 @@ export default function Ventana({ noche, ...props }) {
   // Colores estilizados
   const colorCielo = noche ? "#1a1a2e" : "#a2d2ff" // Azul medianoche vs Azul pastel
   const colorEmisivo = noche ? "#0f0f1d" : "#7eb6ff"
-  console.log(colorCielo)
   return (
     <group {...props}>
       {/* MARCO */}
