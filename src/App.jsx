@@ -88,10 +88,10 @@ function App() {
           
           {/* Tu mesa está en Z: -3.5, por eso el target de arriba es -3.5 */}
           <Mesa position={[0, 0, -3.5]} />
-          <Laptop position={[0, 1.1, -3.2]} scale={0.7}/>
+          <Laptop position={[0, 1.1, -3.4]} scale={0.7}/>
           <Monitor position={[-0.9, 1.1, -3.2]} rotation={[0, Math.PI / 5, 0]} encendido={true}/>
           <Mouse position={[1, 1.1, -3.2]} rotation={[0, Math.PI / 1, 0]}/>
-          <Teclado position={[0, 1.1, -2.6]} />
+          <Teclado position={[0, 1.1, -2.8]} />
           
           <AdornoFlotante position={[1.3, 1.1, -3.9]} /> 
           

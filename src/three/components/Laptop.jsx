@@ -17,11 +17,11 @@ function LaptopStand() {
       </mesh>
 
       {/* Brazos inclinados: Ajustados para recibir la laptop */}
-      <mesh position={[-0.4, 0.18, -0.05]} rotation={[0.4, 0, 0]} castShadow>
+      <mesh position={[-0.45, 0.18, -0.05]} rotation={[0.4, 0, 0]} castShadow>
         <boxGeometry args={[0.05, 0.03, 0.85]} />
         {materialMetal}
       </mesh>
-      <mesh position={[0.4, 0.18, -0.05]} rotation={[0.4, 0, 0]} castShadow>
+      <mesh position={[0.45, 0.18, -0.05]} rotation={[0.4, 0, 0]} castShadow>
         <boxGeometry args={[0.05, 0.03, 0.85]} />
         {materialMetal}
       </mesh>
@@ -37,11 +37,11 @@ function LaptopStand() {
       </mesh>
 
       {/* Ganchos frontales ajustados para que coincidan con el borde de la laptop */}
-      <mesh position={[-0.4, 0.08, 0.38]} castShadow>
+      <mesh position={[-0.45, 0.08, 0.38]} castShadow>
         <boxGeometry args={[0.06, 0.12, 0.04]} />
         {materialMetal}
       </mesh>
-      <mesh position={[0.4, 0.08, 0.38]} castShadow>
+      <mesh position={[0.45, 0.08, 0.38]} castShadow>
         <boxGeometry args={[0.06, 0.12, 0.04]} />
         {materialMetal}
       </mesh>
