@@ -52,7 +52,7 @@ function App() {
         {/* 1. AJUSTE DE CÁMARA: Acercamos la cámara al eje Z negativo donde está la mesa */}
         <Canvas 
           shadows 
-          camera={{ position: [0, 2, 1], fov: 60 }} // Bajamos FOV para menos distorsión
+          camera={{ position: [0, 2, 0.5], fov: 52 }} // Bajamos FOV para menos distorsión
         >
           <RoomLight />
           <Environment preset="city" background blur={1} />
@@ -68,16 +68,16 @@ function App() {
           <OrbitControls 
             makeDefault
             // 2. AJUSTE DE TARGET: La cámara debe rotar alrededor de la mesa
-            target={[0, 1, -3.5]} 
+            target={[0, 2.2, -3.5]}
             
             // 3. LIMITES DE DISTANCIA: Ajustados para el nuevo target
-            maxDistance={8} 
+            maxDistance={6} 
             minDistance={1}
             
             // 4. LIMITES POLARES: Permitimos un poco más de rango vertical
             // para que no se sienta bloqueada al inicio
             maxPolarAngle={Math.PI / 1.7} 
-            minPolarAngle={Math.PI / 3}
+            minPolarAngle={Math.PI / 2.5}
 
             enableDamping={true}
             dampingFactor={0.05}

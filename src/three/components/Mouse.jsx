@@ -31,7 +31,7 @@ export default function Mouse(props) {
       </mesh>
 
       {/* LÍNEA LED (Ajustada sobre la superficie) */}
-      <mesh position={[0, 0.06, -0.05]} rotation={[-Math.PI / 2, 0, 0]}>
+      <mesh castShadow position={[0, 0.06, -0.05]} rotation={[-Math.PI / 2, 0, 0]}>
         {/* Un anillo muy delgado que abraza el lomo del mouse */}
         <torusGeometry args={[0.09, 0.005, 16, 100, Math.PI]} />
         <meshStandardMaterial 
@@ -44,17 +44,17 @@ export default function Mouse(props) {
       </mesh>
 
       {/* BOTONES (Un corte sutil) */}
-      <mesh position={[0, 0.105, 0.06]}>
+      <mesh castShadow position={[0, 0.105, 0.06]}>
         <boxGeometry args={[0.005, 0.01, 0.08]} />
         <meshStandardMaterial color="#000" />
       </mesh>
 
       {/* RUEDITA (Scroll wheel) */}
-      <mesh position={[0, 0.11, 0.06]} rotation={[Math.PI / 2, 0, 0]}>
+      <mesh castShadow position={[0, 0.11, 0.06]} rotation={[Math.PI / 2, 0, 0]}>
         <cylinderGeometry args={[0.02, 0.02, 0.02, 16]} />
         <meshStandardMaterial color="#333" />
       </mesh>
-      <mesh>
+      <mesh castShadow>
         <boxGeometry args={[0.5, 0.02, 0.5]} position={[0, 0, 0.1]} />
         <meshStandardMaterial color="#424242" />
       </mesh>

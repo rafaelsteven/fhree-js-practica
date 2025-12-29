@@ -9,13 +9,13 @@ export default function Monitor({ encendido, imagen, ...props }) {
   return (
     <group {...props}>
       {/* 1. ESTRUCTURA (MARCO TRASERO) */}
-      <mesh position={[0, 1, 0]}>
+      <mesh castShadow position={[0, 1, 0]}>
         <boxGeometry args={[0.75, 1.25, 0.12]} /> {/* Un poco más grande para que sea el marco */}
         <meshStandardMaterial color="#1a1a1a" />
       </mesh>
 
       {/* 2. PANTALLA (LA PARTE QUE SE ENCIENDE) */}
-      <mesh position={[0, 1, 0.02]}>
+      <mesh castShadow position={[0, 1, 0.02]}>
         <boxGeometry args={[0.7, 1.2, 0.1]} />
         
         {/* Si está apagado, mostramos el degradado oscuro. 
